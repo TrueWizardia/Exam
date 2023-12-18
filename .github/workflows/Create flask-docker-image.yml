@@ -2,11 +2,9 @@ name: Python application
 
 on:
     push:
-        branches: [ "main" ]
-    pull_request:
-        branches: [ "main" ]
-
-jobs:
+        branches:
+            - "main"
+jobs: 
     build:
         name: Build an Image
         runs-on: ubuntu-latest
