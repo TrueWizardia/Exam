@@ -18,8 +18,8 @@ jobs:
                 name: Login to Docker Hub
                 uses: docker/login-action@v2
                 with:
-                 username: ${{ secrets.DOCKER_USER }}
-                 password: ${{ secrets.DOCKER_TOKEN }}
+                 username: ${{ secrets.DOCKERHUB_USER }}
+                 password: ${{ secrets.DOCKERHUB_TOKEN }}
             -
                 name: Set up Docker Buildx
                 uses: docker/setup-buildx-action@v2
@@ -30,4 +30,4 @@ jobs:
                   context: .
                   file: ./Dockerfile
                   push: true
-                  tags: ${{ secrets.DOCKER_USER }}/flask-app:latest
+                  tags: ${{ secrets.DOCKERHUB_USER }}/flask-app:latest
