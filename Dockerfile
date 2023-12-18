@@ -11,7 +11,7 @@ RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
 # Копируем файлы приложения в контейнер
-COPY . /app/
+COPY . /app
 
 # Экспортируем порт, на котором будет работать приложение
 EXPOSE 8080
