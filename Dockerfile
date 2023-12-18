@@ -14,7 +14,7 @@ RUN pip install --upgrade pip && \
 COPY . /app
 
 # Экспортируем порт, на котором будет работать приложение
-EXPOSE 8080
+ENV POST 8080
 
 # Команда для запуска приложения
 CMD ["python", "app.py"]
